@@ -7,7 +7,7 @@
 
 ## Источники
 
-- [PRD 0.5, FR-14](../../0-vibes/prd/prd.md)
+- [PRD 0.6, FR-14](../../0-vibes/prd/prd.md)
 - [PT-014](../../1-business-tasks/planning/PT-014.md)
 
 ## Инициатор и сущности

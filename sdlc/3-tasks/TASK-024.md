@@ -9,7 +9,7 @@
 
 ## Источники
 
-- [PRD 0.5, FR-14 и DEC-014](../0-vibes/prd/prd.md)
+- [PRD 0.6, FR-14 и DEC-014](../0-vibes/prd/prd.md)
 - [PT-014](../1-business-tasks/planning/PT-014.md)
 - [ACTOR-009](../2-specs/actors/ACTOR-009-PUBLIC-VIEWER-IN-QUEUE.md)
 - [ENT-002](../2-specs/entities/ENT-002-QUEUE-IN-QUEUE.md)
@@ -33,6 +33,8 @@
 - автоматическое обновление раз в 15 секунд;
 - отсутствие изменяющих форм и закрытых полей;
 - feature-тесты позитивного, пустого и privacy-сценариев;
+- browser checks для desktop/mobile, overflow, console errors и базовой
+  доступности (семантика, keyboard navigation, contrast);
 - обновление README и датированного тестового отчёта.
 
 ## Критерии приёмки
@@ -47,6 +49,8 @@
 8. Нет POST/PUT/PATCH/DELETE действий.
 9. Страница адаптивна и обновляется через 15 секунд.
 10. Автоматические тесты и Pint проходят.
+11. Desktop/mobile browser checks, отсутствие горизонтального overflow,
+    console errors и критических accessibility-проблем документированы.
 
 ## Definition of Done
 

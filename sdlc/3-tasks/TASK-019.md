@@ -12,6 +12,7 @@
 - [PT-011](../1-business-tasks/planning/PT-011.md)
 - [PT-012](../1-business-tasks/planning/PT-012.md)
 - [PRD NFR-06](../0-vibes/prd/prd.md)
+- [MOD-001](../2-specs/modules/MOD-001-TEST-STRATEGY-IN-EVALUATION.md)
 
 ## Цель
 
@@ -23,12 +24,15 @@
 - dependency install с lockfile;
 - formatter/linter;
 - static analysis;
-- unit/feature/integration tests;
+- отдельные jobs для unit, feature и UC acceptance tests;
+- contract/parity tests REST/MCP;
+- integration tests с MariaDB, Redis и Nginx;
 - migration test на чистой DB;
 - secret scan;
 - dependency vulnerability scan;
 - build Docker images;
-- публикация test artifacts.
+- release jobs для concurrency/load и deployment smoke;
+- публикация machine-readable и датированных test artifacts.
 
 ## Требования реализации
 
@@ -37,6 +41,9 @@
 3. Неуспешная обязательная проверка блокирует результат.
 4. Артефакт связан с commit/release id.
 5. Команды совпадают с локальной документацией.
+6. Быстрый job использует изолированную тестовую БД и не имеет production
+   credentials.
+7. `FAIL`, обязательный `INCOMPLETE` или `SKIPPED` блокирует release gate.
 
 ## Критерии приёмки
 
@@ -45,6 +52,7 @@
 3. Миграции проверяются с нуля.
 4. Результаты доступны для AcceptanceReport.
 5. Docker image строится один раз для проверяемого release.
+6. Артефакты содержат commit/release id, окружение, команды и test totals.
 
 ## Definition of Done
 

@@ -14,6 +14,7 @@
 - [ENT-008](../2-specs/entities/ENT-008-DEPLOYMENT-ENVIRONMENT-IN-PLATFORM.md)
 - [EVT-014](../2-specs/events/EVT-014-DEPLOYMENT-VERIFIED-IN-PLATFORM.md)
 - [UC-014](../2-specs/use-cases/UC-014-ACTOR-007-EVT-014-ENT-008-DEPLOYMENT-VERIFIED-IN-PLATFORM.md)
+- [MOD-001](../2-specs/modules/MOD-001-TEST-STRATEGY-IN-EVALUATION.md)
 
 ## Цель
 
@@ -28,7 +29,8 @@
 - TLS configuration;
 - startup/migration/test commands;
 - environment template;
-- runbook запуска и остановки.
+- runbook запуска и остановки;
+- автоматизированный clean-environment deployment smoke.
 
 ## Требования реализации
 
@@ -45,10 +47,15 @@
 3. REST и MCP доступны по HTTPS.
 4. Миграции и тесты выполняются документированно.
 5. Сбой зависимости диагностируется.
+6. Smoke-тест проверяет миграции, idempotent seeder, `/api/health`, HTTPS REST,
+   оба MCP transport, публичное табло и restart контейнеров.
+7. Проверка выполняется на одноразовых volumes без production credentials.
 
 ## Проверки
 
-Compose config validation, image secret scan и deployment smoke test.
+Compose config validation, build, image secret scan, clean-volume deployment
+smoke и негативная проверка недоступной зависимости. Отчёт содержит версии
+образов, команды, release/commit id и endpoint results.
 
 ## Definition of Done
 

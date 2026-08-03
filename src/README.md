@@ -180,6 +180,11 @@ docker compose exec app php artisan mcp:token:revoke <TOKEN_ID>
 
 ```bash
 composer test
+php artisan test --testsuite=UseCases
 ./vendor/bin/pint --test
 php artisan route:list --except-vendor
 ```
+
+Набор `UseCases` сопоставляет исполняемые acceptance-тесты со сценариями
+UC-001–UC-016. Результаты последнего прогона находятся в
+[`../test_results/2026-08-03_tests.md`](../test_results/2026-08-03_tests.md).

@@ -7,7 +7,7 @@
 
 ## Трассировка
 
-- [PRD 0.5, US-10, FR-14, DEC-014](../../0-vibes/prd/prd.md)
+- [PRD 0.6, US-10, FR-14, DEC-014](../../0-vibes/prd/prd.md)
 - [PT-014](../../1-business-tasks/planning/PT-014.md)
 - [ACTOR-009](../actors/ACTOR-009-PUBLIC-VIEWER-IN-QUEUE.md)
 - [EVT-016](../events/EVT-016-PUBLIC-QUEUE-BOARD-VIEWED-IN-QUEUE.md)

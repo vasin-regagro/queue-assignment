@@ -9,6 +9,7 @@
 
 - [PRD, разделы 16–17](../../0-vibes/prd/prd.md)
 - [PT-012](../../1-business-tasks/planning/PT-012.md)
+- [MOD-001](../modules/MOD-001-TEST-STRATEGY-IN-EVALUATION.md)
 
 ## Инициатор и сущность
 
@@ -22,18 +23,21 @@
 
 ## Проверки
 
-Функциональные сценарии, FIFO, состояния, роли, JWT, гостевой доступ,
-идемпотентность, конкурентность, REST/MCP parity, аудит, сроки хранения,
-нагрузка, Docker/HTTPS и документация.
+Static quality, unit, feature, UC acceptance, REST/MCP contract/parity,
+integration с MariaDB/Redis/Nginx, конкурентность, нагрузка, deployment smoke,
+security/privacy, UI, FIFO, состояния, роли, JWT, гостевой доступ,
+идемпотентность, аудит, сроки хранения и документация.
 
 ## Полезная нагрузка
 
-`report_id`, `release_id`, `passed_count`, `failed_count`,
-`critical_defect_count`, `decision`, `residual_risk_refs`, `decided_at`.
+`report_id`, `release_id`, `passed_count`, `failed_count`, `incomplete_count`,
+`skipped_count`, `assertion_count`, `evidence_refs`, `critical_defect_count`,
+`decision`, `residual_risk_refs`, `decided_at`.
 
 ## Постусловия
 
-- `READY`: нет критических дефектов, все критерии доказаны;
+- `READY`: нет критических дефектов, все обязательные проверки имеют `PASS` и
+  все 24 критерия доказаны;
 - `NOT_READY`: зафиксированы блокеры и владельцы;
 - решение не заменяет security check.
 

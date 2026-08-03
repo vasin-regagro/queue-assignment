@@ -14,15 +14,17 @@
 - [ENT-009](../2-specs/entities/ENT-009-ACCEPTANCE-REPORT-IN-EVALUATION.md)
 - [EVT-015](../2-specs/events/EVT-015-MVP-READINESS-EVALUATED-IN-EVALUATION.md)
 - [UC-015](../2-specs/use-cases/UC-015-ACTOR-008-EVT-015-ENT-009-READINESS-DECIDED-IN-EVALUATION.md)
+- [MOD-001](../2-specs/modules/MOD-001-TEST-STRATEGY-IN-EVALUATION.md)
 
 ## Цель
 
-Сопоставить 22 критерия PRD с реализацией и доказательствами.
+Сопоставить 24 критерия PRD с реализацией и доказательствами.
 
 ## Объём
 
 - traceability matrix PRD → PT → spec → task → test;
-- CI, acceptance и performance evidence;
+- static, unit, feature, UC acceptance, contract/parity, integration,
+  concurrency, load, deployment smoke, security/privacy и UI evidence;
 - список дефектов;
 - остаточные риски;
 - решение `READY` или `NOT_READY`;
@@ -35,14 +37,18 @@
 3. Открытый критический дефект запрещает `READY`.
 4. Отчёт версионируется и не переписывает прошлый результат.
 5. Evaluation не подменяет security check.
+6. `INCOMPLETE` и обязательный `SKIPPED` не считаются прохождением.
+7. Отчёт соответствует `test_results/YYYY-MM-DD_tests.md` и содержит точные
+   команды, окружение, release/commit id и test totals.
 
 ## Критерии приёмки
 
-1. Все 22 критерия PRD сопоставлены.
+1. Все 24 критерия PRD сопоставлены.
 2. Все UC имеют evidence.
 3. Блокеры имеют владельца.
 4. Решение воспроизводимо по ссылкам.
 5. Результат готов для `sdlc/7-eval/` или следующего фактического gate.
+6. Ни одна проверка не использовала production DB или production credentials.
 
 ## Definition of Done
 

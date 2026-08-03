@@ -13,6 +13,7 @@
 - [PT-012](../1-business-tasks/planning/PT-012.md)
 - [PRD NFR-01–NFR-03](../0-vibes/prd/prd.md)
 - [ENT-008](../2-specs/entities/ENT-008-DEPLOYMENT-ENVIRONMENT-IN-PLATFORM.md)
+- [MOD-001](../2-specs/modules/MOD-001-TEST-STRATEGY-IN-EVALUATION.md)
 
 ## Цель
 
@@ -26,6 +27,8 @@
 - cancel против call;
 - start-service для одного Operator;
 - idempotency replay;
+- REST/MCP parity под реальными зависимостями;
+- Streamable HTTP и legacy SSE через Nginx;
 - профиль до 100 Queue, 1000 активных Entry/Queue, 20 rps;
 - измерение p95 без внешнего AI provider.
 
@@ -37,11 +40,14 @@
 4. Один Operator не имеет две `SERVING`.
 5. При 20 rps p95 не превышает 500 ms в согласованном тестовом контуре.
 6. Ошибки и saturation наблюдаемы.
+7. Проверки выполняются на одноразовых MariaDB/Redis без production данных.
+8. Отчёт фиксирует версии образов, число workers, длительность, latency
+   percentiles, throughput и error rate.
 
 ## Проверки
 
-Повторяемый load profile, конкурентные integration tests и отчёт с параметрами
-окружения.
+Повторяемый load profile, конкурентные integration tests, проверка инвариантов
+после нагрузки и отчёт с параметрами окружения.
 
 ## Definition of Done
 

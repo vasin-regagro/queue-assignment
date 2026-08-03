@@ -7,7 +7,7 @@
 
 ## Источники
 
-- [PRD 0.5](../../0-vibes/prd/prd.md), FR-02–FR-07, FR-14 и раздел 10.2
+- [PRD 0.6](../../0-vibes/prd/prd.md), FR-02–FR-07, FR-14 и раздел 10.2
 - [PT-003](../../1-business-tasks/planning/PT-003.md)
 - [PT-004](../../1-business-tasks/planning/PT-004.md)
 - [PT-005](../../1-business-tasks/planning/PT-005.md)

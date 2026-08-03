@@ -8,7 +8,7 @@
 
 ## Источники
 
-- [PRD 0.5, US-10, FR-14 и DEC-014](../../0-vibes/prd/prd.md)
+- [PRD 0.6, US-10, FR-14 и DEC-014](../../0-vibes/prd/prd.md)
 - [PT-014](../../1-business-tasks/planning/PT-014.md)
 
 ## Права и ограничения
